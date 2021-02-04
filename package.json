@@ -1,0 +1,41 @@
+{
+  "name": "worldwidewidget",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "run-p dev:server dev:client",
+    "dev:client": "parcel serve ./client/index.html",
+    "dev:server": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": "eda"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harakeke-2021/worldwidewidget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harakeke-2021/worldwidewidget/issues"
+  },
+  "homepage": "https://github.com/harakeke-2021/worldwidewidget#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-eda": "^0.1.4",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "parcel": "^2.0.0-nightly.570",
+    "postcss": "^8.2.4",
+    "postcss-modules": "^4.0.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
