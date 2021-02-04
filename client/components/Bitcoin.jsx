@@ -1,0 +1,2 @@
+//Sample response body - deconstruct what you need
+//{"time":{"updated":"Feb 4, 2021 19:21:00 UTC","updatedISO":"2021-02-04T19:21:00+00:00","updateduk":"Feb 4, 2021 at 19:21 GMT"},"disclaimer":"This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org","bpi":{"USD":{"code":"USD","rate":"37,173.8773","description":"United States Dollar","rate_float":37173.8773},"NZD":{"code":"NZD","rate":"51,944.4713","description":"New Zealand Dollar","rate_float":51944.4713}}}
