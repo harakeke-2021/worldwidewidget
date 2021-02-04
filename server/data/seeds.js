@@ -1,5 +1,3 @@
-const datastores = require('./datastores')
-
 function seedPages (pages) {
   pages.remove({}, { multi: true })
   pages.insert([
@@ -43,12 +41,15 @@ function seedPages (pages) {
   pages.persistence.compactDatafile()
 }
 
-function runSeeds () {
+function runSeeds (datastores) {
   const { pages } = datastores
   seedPages(pages)
 }
 
 if (require.main === module) {
-  runSeeds()
+  const datastores = require('./datastores')
+  runSeeds(datastores)
   console.log('ran seeds')
 }
+
+module.exports = runSeeds

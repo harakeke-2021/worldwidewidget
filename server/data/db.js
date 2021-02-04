@@ -1,9 +1,13 @@
-const { pages } = require('./datastores')
+const datastores = require('./datastores')
+const { pages } = datastores
 
 async function getPages () {
-  pages.find({}, (err, docs) => {
-    if (err) throw err
-    return docs
+  return new Promise((resolve, reject) => {
+    pages.find({}, (err, docs) => {
+      if (err) reject(err)
+      console.log(docs)
+      resolve(docs)
+    })
   })
 }
 
@@ -26,6 +30,7 @@ async function createPage (name) {
 }
 
 module.exports = {
+  datastores,
   getPages,
   getPageByName,
   createPage
