@@ -3,6 +3,7 @@ import Home from './Home'
 import utils from '../styles/utils.module.css'
 
 import '../styles/global.css'
+import WidgetsPage from './WidgetsPage'
 
 export default function App () {
   const [counter, setCounter] = useState(0)
@@ -12,5 +13,6 @@ export default function App () {
     <p className={utils.primary}>the number is {counter}</p>
     <button className={utils.red} onClick={() => setCounter((s) => s + 1)}>wow</button>
     <Home/>
+    <WidgetsPage/>
   </>)
 }
