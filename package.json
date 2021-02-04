@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "run-p dev:server dev:client",
-    "dev:client": "parcel serve ./client/index.html",
+    "dev": "run-p dev:server dev:client:serve",
+    "dev:watch": "run-p dev:server dev:client:watch",
+    "dev:client:serve": "parcel serve ./client/index.html",
+    "dev:client:watch": "parcel watch ./client/index.html",
     "dev:server": "nodemon server",
+    "build": "parcel build ./client/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "eslintConfig": {
@@ -30,6 +33,7 @@
     "parcel": "^2.0.0-nightly.570",
     "postcss": "^8.2.4",
     "postcss-modules": "^4.0.0",
+    "sharp": "^0.27.1",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
