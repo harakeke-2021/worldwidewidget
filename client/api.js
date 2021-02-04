@@ -16,7 +16,7 @@ export function bitCoinTicker () {
     })
 }
 
-export function showKayneQuote () {
+export function showKanyeQuote () {
   return request
     .get(kayneQuote)
     .then(result => {

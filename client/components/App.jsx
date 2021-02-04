@@ -4,6 +4,7 @@ import utils from '../styles/utils.module.css'
 
 import '../styles/global.css'
 import WidgetsPage from './WidgetsPage'
+import Kanye from './Kanye'
 
 export default function App () {
   const [counter, setCounter] = useState(0)
@@ -14,5 +15,6 @@ export default function App () {
     <button className={utils.red} onClick={() => setCounter((s) => s + 1)}>wow</button>
     <Home/>
     <WidgetsPage/>
+    <Kanye />
   </>)
 }
