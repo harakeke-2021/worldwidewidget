@@ -1,6 +1,7 @@
 import request from 'superagent'
 
 const weatherUrl = 'https://www.metaweather.com/api/location/'
+const weatherAKL = 'https://www.metaweather.com/api/location/2348079,'
 
 const bitCoin = 'https://api.coindesk.com/v1/bpi/currentprice/NZD.json'
 
@@ -27,6 +28,15 @@ export function showKanyeQuote () {
 export function showDogImage () {
   return request
     .get(dogImage)
+    .then(result => {
+      return result.body
+    })
+}
+
+//hard coded for Auckland
+export function displayWeather () {
+  return request
+    .get(weatherAKL)
     .then(result => {
       return result.body
     })
