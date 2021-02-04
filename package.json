@@ -9,6 +9,7 @@
     "dev:client:watch": "parcel watch ./client/index.html",
     "dev:server": "nodemon server",
     "build": "parcel build ./client/index.html",
+    "seed": "node ./server/data/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "eslintConfig": {
