@@ -13,6 +13,9 @@ function seedPages (pages) {
           }
         }, {
           name: 'kanye'
+        },
+        {
+          name: 'calendar'
         }
       ]
     }, {
