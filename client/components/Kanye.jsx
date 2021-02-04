@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { showKanyeQuote } from '../api'
+import kanyeQuote from '../styles/kanye.module.css'
 
 function Kanye () {
   const [quote, setQuote] = useState({
@@ -16,9 +17,9 @@ function Kanye () {
   }, [])
 
   return (
-    <>
-      <p>{quote.quote}</p>
-    </>
+
+    <p className={kanyeQuote.quote}>{quote.quote}</p>
+
   )
 }
 
