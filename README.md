@@ -11,6 +11,7 @@ Because we are using parcel as our bundler the setup is a little bit different t
 1. Don't forget to `npm install`
 2. `npm run dev` will launch a development server running at `localhost:1234`. It is configured to forward the requests to the `/api/` path to the server.
 3. You can `npm run dev:watch` to get behaviour more similar to our other projects where node will serve our application at port 3000
+4. Seed database by running `npm run seed`
 
 <sup>please use your linter please i beg of you</sup>
 

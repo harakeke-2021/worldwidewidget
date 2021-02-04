@@ -9,6 +9,7 @@
     "dev:client:watch": "parcel watch ./client/index.html",
     "dev:server": "nodemon server",
     "build": "parcel build ./client/index.html",
+    "seed": "node ./server/data/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "eslintConfig": {
@@ -39,8 +40,10 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "nedb": "^1.8.0",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.1",
+    "react-calendar": "^3.3.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"
   }
