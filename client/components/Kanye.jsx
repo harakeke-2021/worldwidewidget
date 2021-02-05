@@ -18,9 +18,10 @@ function Kanye () {
   }, [])
 
   return (
-    <>
+    <div className={widgetStyle.card}>
+      <h1>kanye says</h1>
       <p>{quote.quote}</p>
-    </>
+    </div>
   )
 }
 

@@ -1,0 +1,11 @@
+.card {
+  position: relative;
+  border: 1px solid #eaeaea;
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  flex-basis: 28%;
+  min-height: 350px;
+  border-radius: 10px;
+}
