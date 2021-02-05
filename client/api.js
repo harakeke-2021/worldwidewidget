@@ -9,6 +9,8 @@ const kayneQuote = 'https://api.kanye.rest/'
 
 const dogImage = 'https://random.dog/woof.json'
 
+const catImage = 'https://aws.random.cat/meow'
+
 export function bitCoinTicker () {
   return request
     .get(bitCoin)
@@ -38,6 +40,14 @@ export function showDogImage () {
 export function displayWeather () {
   return request
     .get(weatherAKL)
+    .then(result => {
+      return result.body
+    })
+}
+
+export function showCatImage () {
+  return request
+    .get(catImage)
     .then(result => {
       return result.body
     })

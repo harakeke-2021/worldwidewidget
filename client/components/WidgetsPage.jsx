@@ -4,19 +4,20 @@ import utilStyles from '../styles/utils.module.css'
 
 import Kanye from './Kanye'
 import Weather from './Weather'
+import Dog from './Dog'
+import Cat from './Cat'
 import kanyeQuote from '../styles/kanye.module.css'
 
 function WidgetsPage () {
   return (
     <div className={utilStyles.container}>
-      <h1>look at all these widgets</h1>
+      <h1>WORLD WIDE WIDGET</h1>
       <div className={widgetPage.grid}>
         <Kanye />
+        <Dog />
         <Kanye />
         <Kanye />
-        <Kanye />
-        <Kanye />
-        <Kanye />
+        <Cat />
         <Kanye />
         <Weather />
         {/* <item className={kanyeQuote.widget}><Kanye className={kanyeQuote.quote}/></item>
