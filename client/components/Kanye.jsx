@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { showKanyeQuote } from '../api'
+
+import widgetStyle from '../styles/widgetStyle.module.css'
 import kanyeQuote from '../styles/kanye.module.css'
 
 function Kanye () {
@@ -17,9 +19,10 @@ function Kanye () {
   }, [])
 
   return (
-
-    <p className={kanyeQuote.quote}>{quote.quote}</p>
-
+    <div className={widgetStyle.card}>
+      <h1>kanye says</h1>
+      <p>{quote.quote}</p>
+    </div>
   )
 }
 
