@@ -4,6 +4,8 @@
 import React, { useState, useEffect } from 'react'
 import { bitCoinTicker } from '../api'
 
+import widgetStyle from '../styles/widget.module.css'
+
 function Bitcoin () {
   const [value, setValue] = useState({
     time: '',
@@ -26,12 +28,12 @@ function Bitcoin () {
   }, [])
 
   return (
-    <>
-      <h1>Bitcoin:</h1>
+    <div className={widgetStyle.card}>
+      <h1>Bitcoin Price</h1>
       <p>Date & Time: {value.time}</p>
       <p>NZD: ${value.nzd}</p>
       <p>USD: ${value.usd}</p>
-    </>
+    </div>
   )
 }
 
