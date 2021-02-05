@@ -2,22 +2,24 @@ import React from 'react'
 import WidgetsPage from './WidgetsPage'
 
 function Demo () {
-  const widget = [
-    { name: 'Kanye' },
-    { name: 'Weather' },
-    { name: 'Dog' },
-    { name: 'Bit Coin' },
-    { name: 'Calender' }
+  const widgets = [
+    { name: 'kanye' },
+    { name: 'bitcoin' },
+    { name: 'weather' },
+    { name: 'dog' },
+    { name: 'cat' },
+    { name: 'calendar' }
   ]
 
   return (
-    widget.map(widget => {
-      return (
-        <div key={widget.name}>
-          <WidgetsPage data={widget.name} />
-        </div>
-      )
-    })
+    <WidgetsPage widgets={widgets} />
+  //   widget.map(widget => {
+  //     return (
+  //       <div key={widget.name}>
+  //         <WidgetsPage data={widget.name} />
+  //       </div>
+  //     )
+  //   })
   )
 }
 
