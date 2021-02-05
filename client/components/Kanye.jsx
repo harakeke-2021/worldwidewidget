@@ -8,6 +8,8 @@ function Kanye () {
     quote: ''
   })
 
+  const [canary, setCanary] = useState(true)
+
   useEffect(() => {
     showKanyeQuote()
       .then((result) => {
@@ -15,12 +17,13 @@ function Kanye () {
         return null
       })
       .catch(err => console.error(err.message))
-  }, [])
+  }, [canary])
 
   return (
     <div className={widgetStyle.card}>
       <h1>kanye says</h1>
       <p>{quote.quote}</p>
+      <button onClick={() => setCanary(c => !c)}>give me more kanye</button>
     </div>
   )
 }
