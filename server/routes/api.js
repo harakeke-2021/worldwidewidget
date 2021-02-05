@@ -1,9 +1,8 @@
 const express = require('express')
 const request = require('superagent')
 
-require('dotenv').config()
-
 const db = require('../data/db')
+require('dotenv').config()
 
 const router = express.Router()
 
