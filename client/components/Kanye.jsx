@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { showKanyeQuote } from '../api'
 
+import widgetStyle from '../styles/widget.module.css'
+
 function Kanye () {
   const [quote, setQuote] = useState({
     quote: ''
