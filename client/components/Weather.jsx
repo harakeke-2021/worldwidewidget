@@ -15,7 +15,6 @@ function Weather () {
   useEffect(() => {
     request.get(serverURL)
       .then((result) => {
-        console.log(result.body)
         const { name, main, weather } = result.body
 
         return setWeather({
