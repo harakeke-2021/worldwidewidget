@@ -13,7 +13,7 @@ function Bitcoin () {
     usd: ''
   })
 
-  useEffect(() => {
+  function updateBtc () {
     bitCoinTicker()
       .then((result) => {
         console.log(result)
@@ -25,6 +25,12 @@ function Bitcoin () {
         return null
       })
       .catch(err => console.error(err.message))
+  }
+
+  useEffect(() => {
+    updateBtc()
+    const interval = setInterval(updateBtc, 10000)
+    return () => clearInterval(interval)
   }, [])
 
   return (
