@@ -13,7 +13,8 @@ export function bitCoinTicker () {
   return request
     .get(bitCoin)
     .then(result => {
-      return result.body
+      const newResult = JSON.parse(result.text)
+      return newResult
     })
 }
 
@@ -33,7 +34,7 @@ export function showDogImage () {
     })
 }
 
-//hard coded for Auckland
+// hard coded for Auckland
 export function displayWeather () {
   return request
     .get(weatherAKL)
