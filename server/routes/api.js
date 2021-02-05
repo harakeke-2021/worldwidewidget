@@ -2,6 +2,7 @@ const express = require('express')
 const request = require('superagent')
 
 const db = require('../data/db')
+require('dotenv').config()
 
 const router = express.Router()
 
@@ -12,6 +13,8 @@ module.exports = router
 // })
 
 const weatherURl = 'api.openweathermap.org/data/2.5/weather'
+const apiKey = process.env.key
+
 const city = 'Auckland'
 
 router.get('/', (req, res) => {
