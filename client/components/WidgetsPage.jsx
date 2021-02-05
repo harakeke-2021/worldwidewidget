@@ -3,6 +3,7 @@ import widgetPage from '../styles/widget.module.css'
 import utilStyles from '../styles/utils.module.css'
 
 import Kanye from './Kanye'
+import Weather from './Weather'
 import Dog from './Dog'
 import Cat from './Cat'
 import kanyeQuote from '../styles/kanye.module.css'
@@ -18,6 +19,7 @@ function WidgetsPage () {
         <Kanye />
         <Cat />
         <Kanye />
+        <Weather />
         {/* <item className={kanyeQuote.widget}><Kanye className={kanyeQuote.quote}/></item>
       <item className={kanyeQuote.widget}><Kanye className={kanyeQuote.quote}/></item>
       <item className={kanyeQuote.widget}><Kanye className={kanyeQuote.quote}/></item>

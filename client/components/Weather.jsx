@@ -1,46 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import request from 'superagent'
+import widgetStyle from '../styles/widget.module.css'
+
+const serverURL = 'http://localhost:3000/api/v1/'
 
 function Weather () {
+  const [weather, setWeather] = useState({
+    city: '',
+    temp: 0,
+    feels: 0,
+    icon: ''
+  })
+
+  useEffect(() => {
+    request.get(serverURL)
+      .then((result) => {
+        console.log(result.body)
+        const { name, main, weather } = result.body
+
+        return setWeather({
+          city: name,
+          temp: main.temp,
+          feels: main.feels_like,
+          icon: weather[0].icon
+        })
+      })
+      .catch(err => console.error(err.message))
+  }, [])
+
   return (
-    <h1>Weather!🌦</h1>
+    <div className={widgetStyle.card}>
+      <h1>Weather for {weather.city}</h1>
+      <p>Current Temp: {weather.temp}</p>
+      <p>Feels like {weather.feels}</p>
+      <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt=""/>
+
+    </div>
   )
 }
 
 export default Weather
-
-// ************
-// comments
-// ************
-
-// API call will return a large object which will need to be deconstructed like the below:
-
-//* **the whole API data for AKL***
-// const {title} = req.body
-
-//* **returns an array of objects and we only need the first one***
-// const {consolidated_weather} = req.body
-
-//* **Assign the current weather ONLY as it is the first item obj in the array***
-// const weather = consolidated_weather[0]
-
-// **********************************************************************
-//* **The follow data is the avaliable to be displayed in the widget***
-// **********************************************************************
-
-//* **the current temp***
-// weather.the_temp
-
-// minimum weather for the day
-// weather.min_temp
-
-// maximum for the day
-// weather.max_temp
-
-// describes the weather 'heavy rain' etc
-// weather.weather_state_name
-
-// returns the abbrivation for the weatherIcon link
-// weather.weather_state_abbr
-
-// Can use this link and just change the {weather.weather_state_abbr} to get the correct icon
-// const weatherIcon = 'https://www.metaweather.com/static/img/weather/{weather.weather_state_abbr}.svg'
