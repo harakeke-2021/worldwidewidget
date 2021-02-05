@@ -23,7 +23,7 @@ function WidgetsPage (props) {
   console.log(widgets)
   return (
     <div className={utilStyles.container}>
-      <h1>WORLD WIDE WIDGET</h1>
+      <h2>WORLD WIDE WIDGET</h2>
       <div className={widgetPage.grid}>
         {widgets.map(({ name }) => {
           const Component = widgetLookup.get(name)

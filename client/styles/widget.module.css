@@ -1,8 +1,8 @@
 .dashboard {
   width: 1480px;
   border-radius: 10px;
-  border-color: black solid;
-  background: grey;
+  border-color: #cfdac8;
+  background-color: #cfdac8;
   color: white;
   margin: 0 auto;
   margin-top: 100px;
@@ -23,7 +23,7 @@
 
 .card {
   position: relative;
-  border: 1px solid #eaeaea;
+  border: 1px solid #e8eae6;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
