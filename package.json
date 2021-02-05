@@ -13,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "eslintConfig": {
-    "extends": "eda"
+    "extends": "eda",
+    "ignorePatterns": ["dist/"]
   },
   "repository": {
     "type": "git",
