@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { bitCoinTicker } from '../api'
+import bitcoinImg from "url:../Bitcoin.svg.png?width=70&quality=60"
 
 import widgetStyle from '../styles/widget.module.css'
 
@@ -35,6 +36,7 @@ function Bitcoin () {
 
   return (
     <div className={widgetStyle.card}>
+      <img src={bitcoinImg} alt=""/>
       <h1>Bitcoin Price</h1>
       <p>Date & Time: {value.time}</p>
       <p>NZD: ${value.nzd}</p>
