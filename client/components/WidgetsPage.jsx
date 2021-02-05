@@ -1,5 +1,5 @@
 import React from 'react'
-import widgetPage from '../styles/widgetspage.module.css'
+import widgetPage from '../styles/widget.module.css'
 import utilStyles from '../styles/utils.module.css'
 
 import Kanye from './Kanye'

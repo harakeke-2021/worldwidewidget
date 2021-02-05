@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { showKanyeQuote } from '../api'
 
-import widgetStyle from '../styles/widgetStyle.module.css'
+import widgetStyle from '../styles/widget.module.css'
 import kanyeQuote from '../styles/kanye.module.css'
 
 function Kanye () {
