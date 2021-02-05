@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { displayWeather } from '../api'
 import request from 'superagent'
 import widgetStyle from '../styles/widget.module.css'
 
@@ -31,8 +30,7 @@ function Weather () {
 
   return (
     <div className={widgetStyle.card}>
-      <h1>Weather!🌦</h1>
-      <p>{weather.city}</p>
+      <h1>Weather for {weather.city}</h1>
       <p>Current Temp: {weather.temp}</p>
       <p>Feels like {weather.feels}</p>
       <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt=""/>
