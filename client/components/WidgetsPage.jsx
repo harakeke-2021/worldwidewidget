@@ -10,7 +10,7 @@ import kanyeQuote from '../styles/kanye.module.css'
 function WidgetsPage () {
   return (
     <div className={utilStyles.container}>
-      <h1>WORLD WIDE WIDGET</h1>
+      <h2>WORLD WIDE WIDGET</h2>
       <div className={widgetPage.grid}>
         <Kanye />
         <Dog />
