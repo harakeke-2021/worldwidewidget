@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import request from 'superagent'
 import widgetStyle from '../styles/widget.module.css'
 
-const serverURL = 'http://localhost:3000/api/v1/'
+const serverURL = '/api/v1/'
 
 function Weather () {
   const [weather, setWeather] = useState({

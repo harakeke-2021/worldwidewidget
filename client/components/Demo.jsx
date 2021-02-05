@@ -4,10 +4,11 @@ import WidgetsPage from './WidgetsPage'
 function Demo () {
   const widgets = [
     { name: 'kanye' },
-    // { name: 'weather' },
-    // { name: 'wog' },
     { name: 'bitcoin' },
-    // { name: 'calender' }
+    { name: 'weather' },
+    { name: 'dog' },
+    { name: 'cat' },
+    { name: 'calendar' }
   ]
 
   return (

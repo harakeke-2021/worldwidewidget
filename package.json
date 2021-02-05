@@ -14,7 +14,9 @@
   },
   "eslintConfig": {
     "extends": "eda",
-    "ignorePatterns": ["dist/"]
+    "ignorePatterns": [
+      "dist/"
+    ]
   },
   "repository": {
     "type": "git",

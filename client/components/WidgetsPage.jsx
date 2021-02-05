@@ -6,12 +6,16 @@ import Kanye from './Kanye'
 import Bitcoin from './Bitcoin'
 import Weather from './Weather'
 import Dog from './Dog'
+import Cat from './Cat'
+import Calendar from './CalenderDate'
 
 const widgetLookup = new Map()
 widgetLookup.set('kanye', Kanye)
 widgetLookup.set('bitcoin', Bitcoin)
-// widgetLookup.set('weather', Weather)
-// widgetLookup.set('dog', Dog)
+widgetLookup.set('weather', Weather)
+widgetLookup.set('dog', Dog)
+widgetLookup.set('cat', Cat)
+widgetLookup.set('calendar', Calendar)
 
 function WidgetsPage (props) {
   const { widgets } = props
